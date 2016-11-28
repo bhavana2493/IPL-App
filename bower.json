@@ -1,0 +1,22 @@
+{
+  "name": "IPL_MyApp",
+  "authors": [
+    "bhavana2493 <bhavana4339@gmail.com>"
+  ],
+  "description": "Ipl application",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "firebase": "^3.6.1",
+    "bootstrap": "^3.3.7",
+    "handlebars": "^4.0.5"
+  }
+}

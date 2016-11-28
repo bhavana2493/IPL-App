@@ -1,0 +1,15 @@
+    <div class="team-info page">
+        <ul class="player-list">
+            <script id="player-template" type="x-handlebars-template">
+                    {{#each this}}
+                        <li data-index={{id}}>
+                            <a href="#teaminfo" class="team-logo"><img src="{{team_img_url}}" height="inherit auto" width="inherit auto" alt="{{team_name}}" class="img-responsive"/></a>
+                            <ul class="team-description">
+                            <li><span>{{team_name}}</span></li>
+                            </ul>
+                            <div class="highlight"></div>
+                        </li>
+                    {{/each}}
+                </script>
+        </ul>
+    </div>

@@ -1,0 +1,69 @@
+<!--to team info and team players -->
+<div class="team-info page">
+    <!--used to display team-info in jumbotron-->
+        <div class="jumbotron" >
+            <marquee>
+                <div class="team-display">
+                </div>
+            </marquee>
+        </div>
+        <!--Displays player list using handlebars-->
+    <ul class="player-list">
+        <script id="players-template" type="x-handlebars-template">
+                    {{#each this}}
+                        <li data-index={{id}} data-toggle="modal" data-target="#{{id}}" type="button"><center>
+                            <a href="#teamplayers" class="player-photo">
+                            <img src="{{player_img_url}}" height="inherit auto" width="inherit auto" alt="{{team_name}}" class="img-responsive"/></a></center>
+                            <ul class="player-description">
+                            <li><span>{{player_name}}</span></li>
+                            </ul>
+                            <div class="highlight"></div>
+                        </li>
+                    {{/each}}
+                </script>
+    </ul>
+    <!--Modal is used to display player info-->
+    <div class="player">
+        <script id="Splayer-template" type="x-handlebars-template">
+        <!-- div containing modal used to display play details in modal view -->
+<div class="modal fade" id="{{id}}" role="dialog">
+    <div class="modal-dialog modal-lg modal-md modal-sm modal-xs">
+        <!-- div containing modal content -->
+
+        <div class="modal-content">
+            <!-- modal header contain the player name -->
+            
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{{player_name}}</h4>
+            </div>
+            <!-- modal body contains all the information of selected player -->
+            <div class="modal-body">
+                <table >
+                    <tr>
+                        <td class="player-image" >
+                        
+                        <img src='{{player_img_url}}'height:'auto' width:'200px' class="img-responsive"/>
+                        </td>
+                         <td class="overlay">
+                            <li><b>Role</b> : {{player_role}}</li>
+                            <li><b>Batting Style</b> : {{player_batting_style}}</li>
+                            <li><b>Bowling Style</b> : {{player_bowling_style}}</li>
+                            <li><b>Date of Birth</b> : {{player_dob}}</li>
+                            <li><b>Nationality</b> : {{player_nationality}}</li>
+                        </td>
+                </table>
+            </div>
+            <!-- footer contains a button close to close modal -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+           
+        </div>
+         
+    </div>
+</div>
+    </script>
+    </div>
+
+</div>

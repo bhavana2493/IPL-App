@@ -3,6 +3,7 @@
   padding: 0;
   list-style-type: none;
 }
+/*background image*/
 body { 
 background: url("/IPL_MyApp/images/Sydney-cricket-ground.jpg") no-repeat center center fixed; 
 -webkit-background-size: cover;
@@ -11,6 +12,7 @@ background: url("/IPL_MyApp/images/Sydney-cricket-ground.jpg") no-repeat center 
 background-size: cover;
 
 }
+/* Navbar components*/
 .navbar-nav > li > a {padding-top:0px !important; padding-bottom:5px !important;}
 .navbar {min-height:55px !important}
 #navlist {
@@ -23,6 +25,7 @@ background-size: cover;
     margin-top:0px;
     margin-bottom:10px;
 }
+/*displaying .team-list*/
 .team-list{
 list-style:none;
 	margin-top:70px;
@@ -32,7 +35,7 @@ list-style:none;
 	opacity: 1;
 	font-size: 0;
 }
-.all-teams.vissible .team-list{
+.all-teams .team-list{
     opacity:1;
     transition:1s;
     pointer-events:auto;
@@ -49,23 +52,19 @@ list-style:none;
 	font:normal 12px sans-serif;
 
 	background-color:#ffffff;
-	border:1px solid #dbe3e7;
+	border:1px solid #e3ebe3;
 	border-radius: 3px;
 	box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.08);
 
 	margin: 0 12px 12px 0;
 	padding: 30px;
 }
-.team-list > li.hidden{
-	opacity: 0.2;
-	pointer-events: none;
-}
 
 /* the team image*/
 
  .team-list .team-photo{
      display:block;
-     box-shadow : 0 0 20px 8px #f3f3f3 inset;
+     box-shadow : 0 0 20px 8px #f3f3f3 ;
 
 	width: 300px;
 	margin-bottom: 25px;
@@ -78,16 +77,16 @@ list-style:none;
 	left:0;
 	width:100%;
 	height:100%;
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.25);
 	opacity: 0;
 	transition: 0.4s;
 }
 .team-list .team-description{
 	margin-top: 20px;
 
-	color: #5d5d5d;
+	color:black;
 	font-size: 12px;
-	line-height: 1.45;
+	line-height: 1.8;
 	white-space: normal;
 
 	max-width: 260px;
@@ -118,7 +117,7 @@ list-style:none;
     
 }
 
-/*Making the list responsive */
+/*Making the team list responsive */
 @media(max-width:800px){
     .team-list .team-photo{
 		width: 225px;
@@ -126,108 +125,151 @@ list-style:none;
 	.team-list .team-description{
 		max-width:225px;
 	}
-}
-/*---------------------------
-	Single team Page
-----------------------------*/
-
-.single-team{
-	z-index: 100;
-}
-
-.overlay{
-	height: 20px;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: #282b2c;
-	transition: 0.6s;
-	z-index: 100;
-}
-
-.single-team.visible .overlay{
-	height: 100%;
-}
-
-.preview-large{
-	box-sizing: border-box;
-	width: 760px;
-	height: 550px;
-	position: fixed;
-	left: 50%;
-	margin-left: -375px;
-	top: 50%;
-	margin-top: -275px;
-	pointer-events: none;
-
-	border-radius: 6px;
-	background-color:  #ffffff;
-
-	z-index: 102;
-	opacity: 0;
-	transition: 0.4s;
-
-}
-
-.single-team.visible .preview-large{
-	opacity: 1;
-	transition: 1.4s;
-	pointer-events: auto;
-}
-
-.preview-large h3{
-	margin-top: 20px;
-}
-
-.preview-large img{
-	width: 100%;
-	height: 280px;
-	border-bottom: 3px solid #efefef;
-	border-radius: 5px 5px 0 0;
-}
-
-.preview-large p{
-	line-height: 23px;
-	padding: 50px 45px;
-}
-
-.close{
-	position: absolute;
-	right: 25px;
-	top: 15px;
-
-	font-size: 28px;
-	color: #555;
-	cursor: pointer;
-}
-
-
-/*---------------------------
-	Error Page
-----------------------------*/
-
-.error{
-	opacity: 0;
-	transition: 0.6s;
-	pointer-events: none;
-	position: absolute;
-	left: 0;
-	top: 100px;
-	width: 100%;
-}
-
-.error.visible{
-	opacity: 1;
-}
-
-.error h3{
-	font-size: 40px;
+	.inner img{
+		width:200px;
+		height: auto;
+	}
 }
 .inner {
 	margin-top:200px ;
 }
 .inner img{
 	width:300px;
-	height:300px;
+	height:auto;
+}
+/*player list*/
+.player-list{
+list-style:none;
+	margin-top:5px;
+	max-width: 1500px;
+	text-align: center;
+	padding: 0;
+	opacity: 1;
+	font-size: 0;
+}
+.team-info .player-list{
+    opacity:1;
+    transition:1s;
+    pointer-events:auto;
+}
+
+.player-list >li{
+   box-sizing:border-box;
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	transition: 0.2s;
+
+	text-align:left;
+	font:normal 12px sans-serif;
+
+	background-color:#ffffff;
+	border:1px solid #dbe3e7;
+	border-radius: 3px;
+	box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.08);
+
+	margin: 0 12px 12px 0;
+	padding: 30px;
+}
+/*player image*/
+ .player-list .player-photo{
+     display:block;
+     box-shadow : 0 0 20px 8px #f3f3f3 ;
+
+	width: 250px;
+	height:auto;
+	margin-bottom: 25px;
+	padding: 20px 0;
+	box-sizing: border-box;
+ }
+ .player-list .highlight{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color: rgba(0,0,0,0.25);
+	opacity: 0;
+	transition: 0.4s;
+}
+.player-list .player-description{
+	margin-top: 20px;
+	text-align: center;
+	color: black;
+	font-size: 1.5em;
+	line-height: 1.45;
+	white-space: normal;
+
+	max-width: 260px;
+	margin-bottom: 20px;
+
+	list-style: none;
+}
+
+.player-list > li:hover .highlight{
+	opacity: 1;
+}
+.player-description{
+    text-align: center;
+    font-size:1em;
+}
+.player-list .player-description li{
+	display: inline-block;
+	margin-right: 10px;
+    margin-top:10px;
+    
+}
+
+
+
+.player-list .player-description li span{
+    display: block;
+	font-weight: bold;
+    
+}
+.player-photo img{
+	 width: 220px; /*set the width or max-width*/
+    height: auto; /*this makes sure to maintain the aspect ratio*/
+}
+
+/*Making the list responsive */
+@media(max-width:800px){
+    .player-list .player-photo{
+		width: 225px;
+	}
+	.player-list .player-description{
+		max-width:225px;
+	}
+}
+
+/*Making modal responsive*/
+@media (max-width: 800px) {
+  .modal { width: 300px; }
+  .modal-body table {
+	  width:300px;
+  }
+  .player-image{width:100px;}
+  .overlay{width:200px;}
+
+}
+/*.modal-content{
+	margin-left:100px;
+	margin-right:75px;
+}
+.modal-header{
+	margin-left:30px;
+}*/
+
+.overlay > li{
+	 margin:30px;
+}
+.jumbotron {
+    height: 500px !important;
+	margin-top:40px;
+}
+.team-display{
+	font-size:1.2em;
+	color: white;
+	margin-top:310px;
+
 }

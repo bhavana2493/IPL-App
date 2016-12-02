@@ -1,6 +1,8 @@
-    <div class="team-info page">
-        <ul class="player-list">
-            <script id="player-template" type="x-handlebars-template">
+   <!--Displays Ipl Team page-->
+    <div class="all-teams page">
+    <ul class="team-list">
+        <!--using handlebars we are displaying teams-->
+        <script id="team-template" type="x-handlebars-template">
                     {{#each this}}
                         <li data-index={{id}}>
                             <a href="#teaminfo" class="team-logo"><img src="{{team_img_url}}" height="inherit auto" width="inherit auto" alt="{{team_name}}" class="img-responsive"/></a>
@@ -11,5 +13,5 @@
                         </li>
                     {{/each}}
                 </script>
-        </ul>
-    </div>
+    </ul>
+</div>

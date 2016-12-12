@@ -15,6 +15,7 @@ $(function () {
     }
     //function to read firebase
     readFirebase(function (data) {
+        $(".loader").hide();
         console.log("firebase");
         $(window).trigger('hashchange');
     });

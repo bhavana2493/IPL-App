@@ -273,3 +273,12 @@ list-style:none;
 	margin-top:310px;
 
 }
+/*@media(max-width:800px){
+	.jumbotron{
+		width:800px;
+		height:auto;
+	}
+}*/
+.loader{
+	margin-top: 400px;
+}
